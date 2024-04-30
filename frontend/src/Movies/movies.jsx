@@ -142,7 +142,9 @@ const Movies = () => {
               >
                 <option value="">All Countries</option>
                 {countries.map((country) => (
-                  <option key={country} value={country}>
+                  <option
+                   key={country} 
+                   value={country}>
                     {country}
                   </option>
                 ))}
@@ -178,10 +180,10 @@ const Movies = () => {
                 
                 src={movie.moviemainphotos[0]}
                 alt={movie.movietitle}
-                style={{ width: "100%", height: "auto" }}
+                style={{ width: "100%", height: "100%" }}
               />
               
-              <h2 className="font-bold underline mt-2">{movie.movietitle}</h2>
+              <h2 className="font-bold text-2xl underline mt-2">{movie.movietitle}</h2>
               </div>
             </li>
           ))}
