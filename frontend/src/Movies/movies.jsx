@@ -169,11 +169,11 @@ const Movies = () => {
         </div>
       </div>
 
-      <div className=" bg-slate-300 ">
+      <div className=" bg-slate-300  ">
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {filterMovies.map((movie) => (
             <li key={movie._id}>
-              <div className="shadow-2xl shadow-black border border-4 border-slate-500 rounded-xl scale-75 cursor-pointer " >
+              <div className="shadow-2xl bg-white shadow-black border border-4 border-slate-500 rounded-2xl scale-75 cursor-pointer hover:scale-110" >
               <img
                 
                 src={movie.moviemainphotos[0]}
