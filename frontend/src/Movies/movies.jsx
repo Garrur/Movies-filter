@@ -142,7 +142,7 @@ const Movies = () => {
 
       
 
-      <div className=" border border-4 border-black rounded">
+      <div className=" border border-3 border-black rounded">
         <ul>
         <div className="grid grid-cols-4 gap-4">
           {filterMovies.map((movie) => (
