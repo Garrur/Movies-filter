@@ -93,7 +93,7 @@ const Movies = () => {
           />
         </div>
       </div>
-      <div className="border border-black mb-4 border-4">
+      <div className="border border-white mb-4">
       <div className="grid grid-cols-8 gap-2">
         <div className="border mr-2 border-black">
           <label>Language:</label>
@@ -142,7 +142,7 @@ const Movies = () => {
 
       
 
-      <div className=" border border-3 border-black rounded">
+      <div className=" ">
         <ul>
         <div className="grid grid-cols-4 gap-4">
           {filterMovies.map((movie) => (
