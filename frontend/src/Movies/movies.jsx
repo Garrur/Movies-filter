@@ -154,7 +154,7 @@ const Movies = () => {
                 alt={movie.movietitle}
                 style={{ width: "400px", height: "500px" }}
               />
-              <h2>{movie.movietitle}</h2>
+              <h2 className="font-bold underline">{movie.movietitle}</h2>
             </li>
             
           ))}
