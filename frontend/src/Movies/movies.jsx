@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -189,6 +190,7 @@ const Movies = () => {
           ))}
         </ul>
       </div>
+      <Footer />
     </div>
   );
 };
