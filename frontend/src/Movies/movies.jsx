@@ -81,91 +81,91 @@ const Movies = () => {
 
   return (
     <div>
+      
+      
+      <div className="bg-slate-500">
       <Navbar />
-      <div className="mt-8">
-        <h1 className="text-3xl font-bold mb-4">Movies</h1>
-      </div>
-
-      <div className="flex flex-col md:flex-row items-center mb-4">
-        <div className="pb-2 md:mr-4">
-          <label className="relative block">
-            <span className="sr-only">Search</span>
-            <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-4 h-4"
+        <div className="flex flex-col md:flex-row items-center ml-8">
+          <div className="pb-2 md:mr-4">
+            <label className="relative block">
+              <span className="sr-only">Search</span>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-4 h-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </span>
+              <input
+                onChange={handleSearch}
+                value={search}
+                className="placeholder:italic placeholder-text-slate-400 block bg-white w-full sm:w-64 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
+                placeholder="Search for movie..."
+                type="text"
+                name="search"
+              />
+            </label>
+          </div>
+          <div className="pb-2 md:mr-4">
+            <label className="relative block">
+              <span className="sr-only">Language</span>
+              <select
+                value={languageFilter}
+                onChange={(e) => setLanguageFilter(e.target.value)}
+                className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                />
-              </svg>
-            </span>
-            <input
-              onChange={handleSearch}
-              value={search}
-              className="placeholder:italic placeholder-text-slate-400 block bg-white w-full sm:w-64 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
-              placeholder="Search for movie..."
-              type="text"
-              name="search"
-            />
-          </label>
-        </div>
-        <div className="pb-2 md:mr-4">
-          <label className="relative block">
-            <span className="sr-only">Language</span>
-            <select
-              value={languageFilter}
-              onChange={(e) => setLanguageFilter(e.target.value)}
-              className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
-            >
-              <option value="">All Languages</option>
-              {languages.map((language) => (
-                <option key={language} value={language}>
-                  {language}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <div className="pb-2 md:mr-4">
-          <label className="relative block">
-            <span className="sr-only">Country</span>
-            <select
-              value={countryFilter}
-              onChange={(e) => setCountryFilter(e.target.value)}
-              className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
-            >
-              <option value="">All Countries</option>
-              {countries.map((country) => (
-                <option key={country} value={country}>
-                  {country}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <div className="pb-2">
-          <label className="relative block">
-            <span className="sr-only">Genre</span>
-            <select
-              value={genreFilter}
-              onChange={(e) => setGenreFilter(e.target.value)}
-              className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
-            >
-              <option value="">All Genres</option>
-              {genres.map((genre) => (
-                <option key={genre} value={genre}>
-                  {genre}
-                </option>
-              ))}
-            </select>
-          </label>
+                <option value="">All Languages</option>
+                {languages.map((language) => (
+                  <option key={language} value={language}>
+                    {language}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="pb-2 md:mr-4">
+            <label className="relative block">
+              <span className="sr-only">Country</span>
+              <select
+                value={countryFilter}
+                onChange={(e) => setCountryFilter(e.target.value)}
+                className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
+              >
+                <option value="">All Countries</option>
+                {countries.map((country) => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="pb-2">
+            <label className="relative block">
+              <span className="sr-only">Genre</span>
+              <select
+                value={genreFilter}
+                onChange={(e) => setGenreFilter(e.target.value)}
+                className="block bg-white border border-slate-300 rounded-md py-2 pl-3 pr-10 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
+              >
+                <option value="">All Genres</option>
+                {genres.map((genre) => (
+                  <option key={genre} value={genre}>
+                    {genre}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
       </div>
 
@@ -173,7 +173,7 @@ const Movies = () => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {filterMovies.map((movie) => (
             <li key={movie._id}>
-              <div className="shadow-2xl bg-white shadow-black border border-4 border-slate-500 rounded-2xl scale-75 cursor-pointer hover:scale-110" >
+              <div className="shadow-2xl bg-white shadow-black border border-4 border-slate-500 rounded-2xl scale-75 cursor-pointer hover:scale-95" >
               <img
                 
                 src={movie.moviemainphotos[0]}
