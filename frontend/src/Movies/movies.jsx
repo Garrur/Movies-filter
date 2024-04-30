@@ -94,7 +94,7 @@ const Movies = () => {
         </div>
       </div>
       <div className="border border-white mb-4">
-      <div className="grid grid-cols-8 gap-2">
+      <div className="grid grid-cols-7 gap-2">
         <div className="border mr-2 border-black">
           <label>Language:</label>
           <select
