@@ -82,10 +82,8 @@ const Movies = () => {
 
   return (
     <div>
-      
-      
       <div className="bg-slate-500">
-      <Navbar />
+        <Navbar />
         <div className="flex flex-col md:flex-row items-center ml-8">
           <div className="pb-2 md:mr-4">
             <label className="relative block">
@@ -143,9 +141,7 @@ const Movies = () => {
               >
                 <option value="">All Countries</option>
                 {countries.map((country) => (
-                  <option
-                   key={country} 
-                   value={country}>
+                  <option key={country} value={country}>
                     {country}
                   </option>
                 ))}
@@ -173,32 +169,36 @@ const Movies = () => {
       </div>
 
       <div className="flex min-h-screen items-center justify-center bg-gray-100">
-  <div className="mx-auto px-5">
-    <div className=" bg-slate-300">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-        {filterMovies.map((movie) => (
-          <li key={movie._id}>
-            <div className="shadow-2xl bg-white shadow-black border border-4 border-slate-500 rounded-2xl scale-75 cursor-pointer hover:scale-95">
-              <img
-                src={movie.moviemainphotos[0]}
-                alt={movie.movietitle}
-                style={{ width: "100%", height: "100%" }}
-                className="rounded-lg object-cover object-center"
-              />
-              <div>
-                <div className="my-6 flex items-center justify-between px-4">
-                  <p className="font-bold text-xl text-gray-500">{movie.movietitle}</p>
-                  <p className="rounded-full text-xl bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white">Download</p>
-                </div>
-                {/* You can add more details here as needed */}
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-</div>
+        <div className="mx-auto">
+          <div className=" bg-slate-300">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {filterMovies.map((movie) => (
+                <li key={movie._id}>
+                  <div className="shadow-2xl bg-white shadow-black border border-4 border-slate-500 rounded-2xl scale-75 cursor-pointer hover:scale-95">
+                    <img
+                      src={movie.moviemainphotos[0]}
+                      alt={movie.movietitle}
+                      style={{ width: "100%", height: "100%" }}
+                      className="rounded-lg object-cover object-center"
+                    />
+                    <div>
+                      <div className="my-6 flex items-center justify-between px-4">
+                        <p className="font-bold text-xl text-gray-500">
+                          {movie.movietitle}
+                        </p>
+                        <p className="rounded-full text-xl bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white">
+                          Download
+                        </p>
+                      </div>
+                      {/* You can add more details here as needed */}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </div>
