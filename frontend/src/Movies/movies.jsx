@@ -33,6 +33,10 @@ const Movies = () => {
       (genreFilter === "" || movie.moviegenres.includes(genreFilter))
   );
 
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
   // Get unique values for language, country, and genre
   const languages = [
     "Hindi",
@@ -83,15 +87,24 @@ const Movies = () => {
       </div>
 
       <div className="flex flex-col items-center mb-4 " >
-        <div className="justify-center">
+       <div className="pb-2">
+        <label className="relative block">
+          <span className="sr-only">Search</span>
+          <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+          </span>
           <input
-            className="rounded border border-blue-500 "
-            type="text"
-            placeholder="Search movies..."
+            onChange={handleSearch}
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            className="placeholder:italic placeholder-text-slate-400 block bg-white w-full sm:w-64 border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 text-sm"
+            placeholder="Search for city..."
+            type="text"
+            name="search"
           />
-        </div>
+        </label>
+      </div>
       </div>
       <div className="border border-white mb-4">
       <div className="grid grid-cols-7 gap-2">
