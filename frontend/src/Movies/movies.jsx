@@ -150,6 +150,7 @@ const Movies = () => {
             <li key={movie._id}>
               
               <img
+                className="shadow-2xl border border-4 border-black rounded-xl"
                 src={movie.moviemainphotos[0]}
                 alt={movie.movietitle}
                 style={{ width: "400px", height: "500px" }}
