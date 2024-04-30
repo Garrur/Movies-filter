@@ -1,12 +1,17 @@
-import './App.css';
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Movies from './Movies/movies';
 
 function App() {
   return (
-    <>
-    <div className="font-bold underline">
-      <h1>Welcome to project</h1>
-    </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Movies />} />
+        
+      </Routes>
+    </Router>
   );
 }
 
