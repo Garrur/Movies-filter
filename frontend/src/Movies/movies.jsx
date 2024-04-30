@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "./navbar";
+import React, { useEffect, useState } from "react";
 import Footer from "./footer";
+import Navbar from "./navbar";
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -186,9 +186,7 @@ const Movies = () => {
                         <p className="font-bold text-xl text-gray-500">
                           {movie.movietitle}
                         </p>
-                        <p className="rounded-full text-xl bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white">
-                          Download
-                        </p>
+                        
                       </div>
                       {/* You can add more details here as needed */}
                     </div>
